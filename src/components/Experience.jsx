@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -8,9 +8,11 @@ import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 
 import { styles } from "../styles";
-import { experiences } from "../constants";
+// import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
+import {getExperiences} from "../api/experiences"
+import { api } from "../config";
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -25,7 +27,7 @@ const ExperienceCard = ({ experience }) => {
       icon={
         <div className='flex justify-center items-center w-full h-full'>
           <img
-            src={experience.icon}
+            src={`${api}/${experience.imageUrl}`}
             alt={experience.company_name}
             className='w-[60%] h-[60%] object-contain'
           />
@@ -33,6 +35,11 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <div>
+          <img
+            src={`${api}/${experience.imageUrl}`}
+            alt={experience.company_name}
+            className='w-[100%] object-contain'
+          />
         <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
         <p
           className='text-secondary text-[16px] font-semibold'
@@ -57,6 +64,26 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
+  const [experiences, setExperiences] = useState([]);
+
+  const init = () => {
+    getExperiences()
+    .then((data => {
+      const {error, result} = data;
+      if(error) {
+        return console.log(error);
+      } else {
+        if (result) {
+          setExperiences(result);
+        }
+      }
+    }))
+  }
+
+  useEffect(() => {
+    init();
+  }, [])
+
   return (
     <>
       <motion.div variants={textVariant()}>
