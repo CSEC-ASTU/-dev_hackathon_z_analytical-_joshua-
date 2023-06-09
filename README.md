@@ -1,8 +1,8 @@
 # -dev_hackathon_z_analytical-_joshua-
 
-# This is a frontend React and Three.js app for Mukerem Ali's portfolio project
+## This is a frontend React and Three.js app for Mukerem Ali's portfolio project
 
-## To start this program
+### To start this program
 1 - clone the repo
 ```
 git clone https://github.com/CSEC-ASTU/dev_hackathon_z_analytical-_joshua.git
