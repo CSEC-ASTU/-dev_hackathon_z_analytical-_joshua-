@@ -1,5 +1,5 @@
 # -dev_hackathon_z_analytical-_joshua-
-## This is a API development branch using node for Mukerem Ali's portfolio project
+## This is an API development branch using node for Mukerem Ali's portfolio project
 ###
 Before you run this project
 
