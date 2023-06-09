@@ -1,11 +1,13 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div className='relative z-0 bg-primary'>
+    <Routes>
+      <Route path='/' element={
+        <div className='relative z-0 bg-primary'>
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
           <Navbar />
           <Hero />
@@ -20,6 +22,9 @@ const App = () => {
           <StarsCanvas />
         </div>
       </div>
+      } />
+      <Route path='/blog' exact element={<></>} />
+      </Routes>
     </BrowserRouter>
   );
 }

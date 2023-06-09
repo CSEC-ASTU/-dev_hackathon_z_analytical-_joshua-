@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
+import { api } from "../config";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -44,8 +45,7 @@ const Navbar = () => {
         >
           <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Adrian &nbsp;
-            <span className='sm:block hidden'> | JavaScript Mastery</span>
+            Mukerem Ali
           </p>
         </Link>
 
@@ -61,6 +61,22 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+            <li
+              className={`${
+                active === "Blog" ? "text-white" : "text-secondary"
+              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              onClick={() => setActive("Blog")}
+            >
+              <a href="#">Blog</a>
+            </li>
+                        <li
+              className={`${
+                active === "Download CV" ? "text-white" : "text-secondary"
+              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              onClick={() => setActive("Download CV")}
+            >
+            <a href={`${api}/download/cv`}>Download CV</a>
+            </li>
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
