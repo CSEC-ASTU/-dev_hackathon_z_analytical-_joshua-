@@ -3,7 +3,7 @@
 ###
 Before you run this project
 
-`-` create .env file
+`*` create .env file
 
 [-] create a valiable call DB_URL
 [-] assign your mongodb url for DB_URL
