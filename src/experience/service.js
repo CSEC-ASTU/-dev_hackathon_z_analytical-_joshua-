@@ -55,3 +55,14 @@ exports.getById = async (id) => {
     return { status: 200, result }
   }
 }
+
+exports.addImageById = async (id, path) => {
+  // return { status: 200, message: "Image added", id, path }
+  const result = await Model.findOneAndUpdate({ _id: id }, path);
+  if (!result) {
+    return { status: 400, error: "Something went wrong" }
+  }
+  else {
+    return { status: 200, message: "Image added" }
+  }
+}

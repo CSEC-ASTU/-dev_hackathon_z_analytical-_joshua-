@@ -1,4 +1,4 @@
-const { test, create, update, remove, get, getById } = require('./service')
+const { test, create, update, remove, get, getById, addImageById } = require('./service')
 
 exports.test = async (req, res) => {
   const response = await test();
@@ -57,9 +57,10 @@ exports.getById = async (req, res) => {
   return res.status(status).json(response);
 }
 
-exports.addImage = async (req, res) => {
+exports.addImageById = async (req, res) => {
   const { id } = req.params;
-  const response = await getById(id);
+  const path = req.pathName;
+  const response = await addImageById(id, { imageUrl: path });
   const { error, status } = response;
   if (error) {
     return res.status(status).json(response);
