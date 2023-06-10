@@ -13,6 +13,11 @@ To get started with the portfolio, follow these steps:
 1. Clone the repository:
    - Frontend: `git clone --branch frontend-fix https://github.com/CSEC-ASTU/dev_hackathon_z_analytical-_joshua.git`
    - Backend: `git clone --branch backend https://github.com/CSEC-ASTU/dev_hackathon_z_analytical-_joshua.git`
+   - CMS: `git clone --branch CMS https://github.com/CSEC-ASTU/dev_hackathon_z_analytical-_joshua.git`
+
+`*` You can your the backend API make from the node.js. But it doesn't provide you admin UI.
+`*` If you are using the CMS with Strapi, CMS branch, it provide you a more flexable admin UI panel to customize all the experience.
+
 2. Navigate to both cloned directories and run `npm install`.
 
 ## Usage
