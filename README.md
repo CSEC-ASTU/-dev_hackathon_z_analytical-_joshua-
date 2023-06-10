@@ -4,16 +4,16 @@
 
 ## Description
 
-This portfolio showcases Mukerum Ali's projects, participations, awards, and all his committed works.
+This portfolio showcases Mukerum Ali's projects, participation, awards, and all his committed works.
 
 ## Installation
 
 To get started with the portfolio, follow these steps:
 
 1. Clone the repository:
-   - Frontend: `git clone --branch frontend-fix https://...`
-   - Backend: `git clone --branch backend httP://...`
-2. Navigate to both repositories and run `npm install`.
+   - Frontend: `git clone --branch frontend-fix https://github.com/CSEC-ASTU/dev_hackathon_z_analytical-_joshua.git`
+   - Backend: `git clone --branch backend https://github.com/CSEC-ASTU/dev_hackathon_z_analytical-_joshua.git`
+2. Navigate to both cloned directories and run `npm install`.
 
 ## Usage
 
