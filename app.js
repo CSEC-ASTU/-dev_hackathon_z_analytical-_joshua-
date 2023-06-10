@@ -2,10 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const routes = require('./src/routes');
 const cors = require("cors");
+const { db_url } = require('./src/config')
 
 const app = express();
 
-mongoose.connect('mongodb://127.0.0.1:27017/mukerum')
+mongoose.connect(db_url)
   .then(() => console.log('Connected!'));
 
 app.use(express.json());
