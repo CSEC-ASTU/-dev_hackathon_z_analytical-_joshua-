@@ -26,17 +26,17 @@ const ExperienceCard = ({ experience }) => {
       iconStyle={{ background: experience.iconBg }}
       icon={
         <div className='flex justify-center items-center w-full h-full'>
-          <img
+          {/* <img
             src={`${api}/${experience.imageUrl}`}
             alt={experience.company_name}
             className='w-[60%] h-[60%] object-contain'
-          />
+          /> */}
         </div>
       }
     >
       <div>
           <img
-            src={`${api}/${experience.imageUrl}`}
+            src={experience.image}
             alt={experience.company_name}
             className='w-[100%] object-contain'
           />
@@ -50,7 +50,7 @@ const ExperienceCard = ({ experience }) => {
       </div>
 
       <ul className='mt-5 list-disc ml-5 space-y-2'>
-        {experience.points.map((point, index) => (
+        {experience.points.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
             className='text-white-100 text-[14px] pl-1 tracking-wider'
@@ -69,13 +69,11 @@ const Experience = () => {
   const init = () => {
     getExperiences()
     .then((data => {
-      const {error, result} = data;
-      if(error) {
+      if(data.error) {
         return console.log(error);
       } else {
-        if (result) {
-          setExperiences(result);
-        }
+        console.log(data.data[0].attributes.points.points);
+        setExperiences(data.data);
       }
     }))
   }
@@ -100,7 +98,7 @@ const Experience = () => {
           {experiences.map((experience, index) => (
             <ExperienceCard
               key={`experience-${index}`}
-              experience={experience}
+              experience={experience.attributes}
             />
           ))}
         </VerticalTimeline>

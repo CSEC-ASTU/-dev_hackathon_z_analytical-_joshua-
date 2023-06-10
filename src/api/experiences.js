@@ -6,7 +6,7 @@ export const getExperiences = async () => {
     'Accept': 'application/json',
   }
   try {
-    const response = await fetch(`${api}/api/experience/get`, {
+    const response = await fetch(`http://localhost:1337/api/experiences`, {
       method: 'GET',
       headers,
     });
