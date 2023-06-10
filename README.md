@@ -23,7 +23,7 @@ DATABASE_USERNAME=
 DATABASE_PASSWORD=
 DATABASE_SSL=false
 JWT_SECRET=
-
+`env.zip` for more info
 
 ```
 npm run develop
