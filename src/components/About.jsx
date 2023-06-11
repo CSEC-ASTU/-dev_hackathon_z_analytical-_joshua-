@@ -44,14 +44,18 @@ const About = () => {
       </motion.div>
 
       <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
+        variants={fadeIn('', '', 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        Expert software development professional with proven skills in project
+        management, coding and testing. Brings 4 years of experience in building
+        robust, well-performing applications matching specifications and
+        exceeding expectations. Seeks out opportunities to expand skills and
+        improve designs. Complex problem solver with an analytical and driven
+        mindset. Dedicated to achieving demanding development objectives
+        according to tight schedules while producing impeccable code. For the
+        last 5 years, I competed in the ICPC competition and I am 2021 ICPC
+        World Finalist.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

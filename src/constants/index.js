@@ -46,15 +46,15 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Django Framework",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "REST API",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Data Science",
     icon: creator,
   },
 ];
@@ -71,14 +71,6 @@ const technologies = [
   {
     name: "JavaScript",
     icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
   },
   {
     name: "Redux Toolkit",
@@ -198,66 +190,33 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Andalus Competitive Programming Online Judge",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Andalus is an automated judge system to run programming contests. It has a mechanism to submit problem solutions have them judged fully automatically and provides(web) interfaces for teams, the jury and the public.",
     tags: [
       {
-        name: "react",
+        name: "Judge",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "Programming contests",
         color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
       },
     ],
     image: carrent,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "Familysooq Marketplace",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Familysooq is a marketplace that is created for Ethiopians that provides buyers and sellers with an avenue to exchange and trade goods and services.It has local payment gateways so that users can make transactions easily.",
     tags: [
       {
-        name: "react",
+        name: "Marketplace",
         color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
     source_code_link: "https://github.com/",
   },
 ];
