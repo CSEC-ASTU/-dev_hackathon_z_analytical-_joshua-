@@ -14,10 +14,8 @@ app.use(cors());
 app.use('/api', routes);
 app.use('/uploads', express.static('uploads'));
 
-
-
 app.get('/download/cv', (req, res) => {
-  const cv = './src/uploads/cv/Eyasu Yidnekachew CV.pdf';
+  const cv = './src/uploads/cv/cv.pdf';
   return res.download(cv);
 })
 
